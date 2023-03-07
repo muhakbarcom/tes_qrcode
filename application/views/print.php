@@ -18,7 +18,7 @@
       <thead>
         <tr>
           <th>ID</th>
-          <th>Project code</th>
+          <th style="width: 20px;">Project code</th>
           <th>Nama</th>
           <th>Klien</th>
         </tr>

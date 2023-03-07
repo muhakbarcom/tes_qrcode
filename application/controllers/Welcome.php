@@ -20,4 +20,14 @@ class Welcome extends CI_Controller
 		$data['project'] = $this->db->query("SELECT id,project_code,name,client_name FROM PROJECT")->result_array();
 		$this->load->view('print', $data);
 	}
+
+	public function cetak_resi($id)
+	{
+		$this->load->helper('qrcode');
+		// Load Zend Barcode Helper
+		$this->load->helper('barcode');
+
+		$data['detail_project'] = $this->db->query("SELECT * FROM PROJECT WHERE id='$id'")->row_array();
+		$this->load->view('cetak_resi', $data);
+	}
 }

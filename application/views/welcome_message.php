@@ -29,6 +29,7 @@
 					<th>Project code</th>
 					<th>Nama</th>
 					<th>Klien</th>
+					<th class="text-center">Aksi</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -40,6 +41,7 @@
 					echo "<td>" . $value['project_code'] . "</td>";
 					echo "<td>" . $value['name'] . "</td>";
 					echo "<td>" . $value['client_name'] . "</td>";
+					echo "<td class='text-center'><a href='" . base_url('welcome/cetak_resi/') . $value['id'] . "' class='btn btn-sm btn-primary' target='_blank'>Cetak Resi</a></td>";
 					echo "</tr>";
 				}
 				?>
